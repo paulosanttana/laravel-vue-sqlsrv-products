@@ -39904,8 +39904,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\PAULO\workspace\projetos\laravel-vue\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\PAULO\workspace\projetos\laravel-vue\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\PAULO\workspace\cna-projeto\laravel-vue-sqlsrv-products\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\PAULO\workspace\cna-projeto\laravel-vue-sqlsrv-products\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
