@@ -5,7 +5,7 @@
 
 **Projeto Laravel + VueJs + SQLServer. Cadastrando Produtos**
 
-Consumindo API Laravel, SQL Server e VueJs. Esse projeto utiliza Laravel 5.7, VueJs, Bootstrap e Mysql.
+Consumindo API Laravel, SQL Server e VueJs. Esse projeto utiliza Laravel 5.7, VueJs, Bootstrap e SQL Server.
 
 
 
@@ -26,6 +26,7 @@ Consumindo API Laravel, SQL Server e VueJs. Esse projeto utiliza Laravel 5.7, Vu
 ## Configuração SQL Server
 
 **Driver SQLSERVER para PHP**
+(Procedimento feito em maquina com Windows 10)
 
 1. Acesse o site e faça o download do driver `Microsoft Drivers 5.8 for PHP for SQL Server`
 [Link Driver](https://docs.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-2017)
@@ -33,12 +34,13 @@ Consumindo API Laravel, SQL Server e VueJs. Esse projeto utiliza Laravel 5.7, Vu
 2. Extraia os drivers para o diretório `ext` da instalação do PHP
 
 3. Adicionar no `php.ini` as extençõs
-```bash
+```php
 extension=php_sqlsrv_73_nts_x64.dll
 extension=php_pdo_sqlsrv_73_nts_x64.dll
 ```
 
-**Arquivo config\database.php**
+**Configure conexão padrão `sqlsrv` e host do banco no arquivo config\database.php**
+
 ```php
 'default' => env('DB_CONNECTION', 'sqlsrv'),
 	
@@ -58,8 +60,8 @@ extension=php_pdo_sqlsrv_73_nts_x64.dll
 ],
 ```
 
-**Arquivo .env**
-```txt
+**Adicione credenciais do banco no arquivo .env**
+```php
 DB_CONNECTION=sqlsrv
 DB_HOST="DESKTOP-890UMAI"  
 DB_PORT=null
@@ -69,12 +71,14 @@ DB_PASSWORD=sql@2020
 ```
 
 **Solução para o erro “Tipo de dados datetime resultou em um valor fora do intervalo” no SQL Server**
+(ATENÇÃO! procedimento somente para banco que esteja em formato de data em português)
 
-(Executar no SQL Server)
+```sql
+--Executar no SQL Server
 
 Exec sp_defaultlanguage 'sa', 'us_english'
 Reconfigure
-
+```
 -------------------------------------------------------
 
 **Install**
